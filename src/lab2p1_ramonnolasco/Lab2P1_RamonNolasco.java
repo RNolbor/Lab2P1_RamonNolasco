@@ -48,16 +48,55 @@ public class Lab2P1_RamonNolasco {
                 ntabla2 = scanner.nextInt();
             }
             
-            int tabl
+            String n1;
+            int n2;
+            int n3;
+            int n4;
+            int n5;
+            int n6;
+            int n7;
+            int n8;
+            int n9;
+            int n10;
+            int n11;
+            int n12;
             
             
-            System.out.println("Numeros de");
+            int contador1 = 1;
+            int contador2 = 1;
+
+            int num1;
+            int num2;
+           
+            boolean bucle = true;
+            
+            while (contador1 <= 12){
+                num1 = ntabla1 * contador1;
+                
+                while (contador2 <= 12){
+                    
+                    num2 = ntabla2 * contador2;
+                    if (num1 =  )
+                    
+                    contador2 += 1;
+                }
+                contador1 += 1;
+            }
+            
+            
+            
+            System.out.println("Numeros de la tabla de " + ntabla1 + " encontrados en la tabla de " + ntabla2 + ": ");
             
             
             
             
         }
         
+        if (opcion == 2){
+            
+            
+            
+        }
     }
     
 }
