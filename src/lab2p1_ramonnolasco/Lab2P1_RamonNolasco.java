@@ -97,10 +97,36 @@ public class Lab2P1_RamonNolasco {
                 }
                 
                 
-                
-                
-                
             }else if (opcion == 3){
+                
+                
+                System.out.println("Ingrese un numero binario:  ");
+                int binario = input.nextInt();
+                int original = binario;
+                int complemento = 0;
+                int factor = 1;
+                boolean encontrado = false;
+                
+                while (binario > 0) {
+                    int digito = binario % 10;
+                    binario /= 10;
+
+                    if (encontrado){
+                        if (digito == 1){
+                            complemento += 0 * factor;
+                        }else{
+                            complemento += 1 * factor;
+                        }
+                    }else{
+                        complemento += digito * factor;
+                        if (digito == 1){
+                            encontrado = true;
+                        }
+                    }
+                    factor *= 10;
+                }
+                System.out.println("El complemento de " + original + " es " + complemento);
+                
                 
             }else if (opcion == 4){
                 menu = false;
