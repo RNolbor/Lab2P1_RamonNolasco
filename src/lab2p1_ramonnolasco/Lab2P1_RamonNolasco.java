@@ -30,6 +30,8 @@ public class Lab2P1_RamonNolasco {
             int opcion = input.nextInt();
             
             if (opcion == 1){
+                
+                
                 System.out.println("Ingrese un numero para descomponer: ");
                 int numero = input.nextInt();
                 System.out.println("Numero ingresado:");
@@ -37,29 +39,66 @@ public class Lab2P1_RamonNolasco {
                 System.out.println("Factores:");
                 
                 int tempN = numero;
+                System.out.println(""); // AQUI SE PUDO PONER UN UNO AL INICIO COMO EN EL EJEMPLO:("1 ");
+                int factor = 3;
                 
-                while (tempN > 1){
-                    
-                    if (tempN % 2 == 0){
-                        tempN /= 2;
-                        System.out.print(" 2 ");
-                    }else if (tempN % 3 == 0){
-                        tempN /= 3;
-                        System.out.print(" 3 ");
-                    }else if (tempN % 5 == 0){
-                        tempN /= 5;
-                        System.out.print(" 5 ");
-                    }else if (tempN % 7 == 0){
-                        tempN /= 7;
-                        System.out.print("");
+                while (tempN % 2 == 0){
+                    tempN /= 2;
+                    System.out.print(2 + " ");
+                }
+                while (factor * factor <= tempN){
+                    while (tempN % factor == 0){
+                        System.out.print(factor + " ");
+                        tempN /= factor;
                     }
-                    
+                    factor += 2;
+                }
+                if (tempN > 1){
+                    System.out.print(tempN + " ");
+                }
+                
+                
+            }else if (opcion == 2){
+                
+                
+                System.out.println("Ingrese numero 1: ");
+                int numero1 = input.nextInt();
+                System.out.println("Ingrese numero 2: ");
+                int numero2 = input.nextInt();
+                System.out.println("Ingrese numero 3: ");
+                int numero3 = input.nextInt();
+               
+              
+                int distancia1 = numero2 - numero1;
+                int distancia2 = numero3 - numero1;
+                int distancia3 = numero3 - numero2;
+                
+                
+                if (distancia1 < 0){
+                    distancia1 = -distancia1;
+                }
+                if (distancia2 < 0){
+                    distancia2 = -distancia2;
+                }
+                if (distancia3 < 0){
+                    distancia3 = -distancia3;
+                }
+                
+                int distanciaTotal1 = distancia1 + distancia2;
+                int distanciaTotal2 = distancia1 + distancia3;
+                int distanciaTotal3 = distancia2 + distancia3;
+                
+                if (distanciaTotal1 >= distanciaTotal2 && distanciaTotal1 >= distanciaTotal3){
+                    System.out.println("El primer numero, " + numero1 + ", es el mas alejado");
+                }else if (distanciaTotal2 >= distanciaTotal1 && distanciaTotal2 >= distanciaTotal3){
+                    System.out.println("El segundo numero, " + numero2 + ", es el mas alejado");
+                }else {
+                    System.out.println("El tercer numero, " + numero3 + ", es el mas alejado");                    
                 }
                 
                 
                 
                 
-            }else if (opcion == 2){
                 
             }else if (opcion == 3){
                 
